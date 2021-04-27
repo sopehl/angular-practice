@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  isDisabled = true
+
+  constructor() { 
+    setTimeout(() => {
+      this.isDisabled = false
+      console.log("Button is enabled")
+    }, 2000);
+  }
 
   ngOnInit(): void {
   }
