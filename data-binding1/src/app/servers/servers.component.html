@@ -11,6 +11,17 @@
     class="form-control"
     (input) = "updateServerName($event)"/>
 
+<input 
+    class="form-control"
+    placeholder="two-bind"
+    [(ngModel)] = "serverName"/>
+
+<input 
+    class="form-control"
+    placeholder="two-bind"
+    [(ngModel)] = "serverName"/>
+
+
 <p>{{ serverName }}</p>
 
 <button 

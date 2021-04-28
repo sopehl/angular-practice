@@ -67,3 +67,7 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value
   }
 ```
+
+> Side Note: Event binding from html temp. to TS file, Property binding from ts to html, Two-Way binding combine both of them.
+
+- When we bind the value and change it, it will be automatically changed in html side and ts side both.
