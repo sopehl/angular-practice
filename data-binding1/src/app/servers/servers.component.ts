@@ -9,6 +9,10 @@ export class ServersComponent implements OnInit {
 
   isDisabled = true
 
+  serverAddedStatus = "No any server"
+
+  serverName = "";
+
   constructor() { 
     setTimeout(() => {
       this.isDisabled = false
@@ -17,6 +21,14 @@ export class ServersComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  onServerChanged() {
+    this.serverAddedStatus = "Server Added"
+  }
+
+  updateServerName(event: InputEvent) {
+    this.serverName = (<HTMLInputElement>event.target).value
   }
 
 }
