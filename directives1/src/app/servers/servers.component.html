@@ -1,0 +1,16 @@
+<input [(ngModel)] = 'serverName'>
+
+<br>
+
+<button
+    (click) = "onServerCreated($event)">Create Server</button>
+
+<p *ngIf="isServerCreated; else noServer">{{ serverStatus }}</p>
+
+<ng-template #noServer>
+    <p>
+        No server is created
+    </p>
+</ng-template>
+
+<p [ngStyle]="{color: getColor()}">Server is {{status}}</p>
