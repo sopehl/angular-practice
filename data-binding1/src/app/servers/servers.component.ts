@@ -24,7 +24,7 @@ export class ServersComponent implements OnInit {
   }
 
   onServerChanged() {
-    this.serverAddedStatus = "Server Added"
+    this.serverAddedStatus = "Server Added and Server name: " + this.serverName
   }
 
   updateServerName(event: InputEvent) {
