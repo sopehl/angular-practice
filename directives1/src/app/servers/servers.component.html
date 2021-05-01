@@ -14,3 +14,5 @@
 </ng-template>
 
 <p [ngStyle]="{color: getColor()}">Server is {{status}}</p>
+
+<app-server *ngFor="let serverItem of servers"></app-server>
