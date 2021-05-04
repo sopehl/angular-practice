@@ -1,0 +1,10 @@
+<button (click) = "onDisplayButtonClicked()">Display Detail!</button>
+
+<p [ngStyle] = "{'display': getParStyle()}">Payment type = credit card</p>
+
+<div 
+    *ngFor="let logItem of buttonClickLogs; let i = index" [attr.data-index]="i" 
+    [ngStyle] = "{'background': i > 3 && getLogStyleOfBackground()}" 
+    [ngClass] = "{'whiteFont': i > 3 && this.clickCount > 4}">
+        {{logItem}}
+</div>
