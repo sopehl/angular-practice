@@ -3,3 +3,17 @@
 ## @Input() decorator
 -   It provide to expose(binding) the property of component explicitly by putting before property.
 -   If you want to bind with the alternative naming for property in TS file, you can use like @Input('srvElement') instead.
+
+## @Output decorator
+-   It provides the custom event to be used by other components. In other words, It serves the properties by emitting with the JS object(probably contains its own properties) which is specified by the developer.
+-   Alias(alternative naming of custom event or property) is the same as above in Input decorator. @Output('bpCreated')
+
+## View Encapsulation
+-   Every CSS of component will effect their own components. In app.component.css file, there is p tag styling color cyan but it doesn't effect the templates which belong to parent. Every component elements have the same attribute to be evaluated the DOM by Angular. These attributes can seem stanger string. tag's attribute(like: _ngcontent-rpm-c41) as follows in css.
+
+```html
+p[_ngcontent-act-c41] {
+    color: blue;
+}
+
+```
