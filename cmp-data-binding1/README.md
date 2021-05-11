@@ -17,3 +17,26 @@ p[_ngcontent-act-c41] {
 }
 
 ```
+
+## Encapsulation strategies
+
+- It changes the encapsulation style strategies as following comments.
+
+```typescript
+@Component({
+  selector: 'app-server-element',
+  templateUrl: './server-element.component.html',
+  styleUrls: ['./server-element.component.css'],
+  encapsulation: ViewEncapsulation.None // it's going to apply css which is written in css of this component globally. So it will remove style encapsulation then styles will be affected globally. 'ViewEncapsulation.ShadowDom' provides the shadow dom to encapsulate styles.
+})
+export class ServerElementComponent implements OnInit {
+
+  @Input() element: {name: string, type: string, content: string};
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
+```
