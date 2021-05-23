@@ -20,7 +20,7 @@ p[_ngcontent-act-c41] {
 
 ## Encapsulation strategies
 
-- It changes the encapsulation style strategies as following comments.
+- It changes the encapsulation style strategies as following comments. 'ViewEncapsulation.Emulated' is default.
 
 ```typescript
 @Component({
