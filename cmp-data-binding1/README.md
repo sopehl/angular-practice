@@ -40,3 +40,22 @@ export class ServerElementComponent implements OnInit {
 
 }
 ```
+
+## Local varible in HTML templates
+
+- We can define local varible like as follow. 'serverNameInputElement' can only be used in the html template as you see onAddServer(serverNameInputElement) function in TS file.
+
+```html
+<input type="text" class="form-control" #serverNameInputElement>
+
+<button
+        class="btn btn-primary"
+        (click)="onAddServer(serverNameInputElement)">Add Server</button>
+```
+
+```typescript
+onAddServer(serverInput) {
+    console.log(serverInput);
+    this.serverCreated.emit({serverName: serverInput.value, serverContent: this.newServerContent});
+  }
+```
