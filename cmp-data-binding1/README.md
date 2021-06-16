@@ -59,3 +59,17 @@ onAddServer(serverInput) {
     this.serverCreated.emit({serverName: serverInput.value, serverContent: this.newServerContent});
   }
 ```
+
+## ViewChild() decorator
+
+- We can access DOM from TS file by using the ViewChild decorator. We use the local variable we used in HTML file like as follow.
+
+```html
+<input type="number" class="form-control" #serverNodeCount>
+````
+
+```typescript
+@ViewChild('serverNodeCount') nodeCount: ElementRef;
+
+this.nodeCount.nativeElement.value
+```
