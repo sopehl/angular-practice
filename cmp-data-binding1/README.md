@@ -73,3 +73,43 @@ onAddServer(serverInput) {
 
 this.nodeCount.nativeElement.value
 ```
+
+## <ng-content>
+
+- If you have complex HTML which you want to inject contents from outside, you can use 'ng-content' tag instead of HTML contents.
+In outside container template, we need to add HTML contents between the component selector tags like as follow:
+
+```html
+<div
+    class="panel panel-default">
+    <div class="panel-heading">{{ element.name }}</div>
+    <div class="panel-body">
+      <ng-content></ng-content>
+    </div>
+</div>
+```
+
+```html
+<div class="container">
+  <app-cockpit
+    (serverCreated) = "onServerCreated($event)"
+    (bpCreated) = "onBlueprintCreated($event)">
+  </app-cockpit>
+  <hr>
+  <div class="row">
+  <div class="col-xs-12">
+
+    <app-server-element *ngFor="let serverElement of serverElements" [element] = "serverElement">
+
+      <p>
+        <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
+        <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
+        <i>{{serverElement.nodeCount}}</i>
+      </p>
+
+    </app-server-element>
+
+  </div>
+</div>
+</div>
+```

@@ -12,4 +12,22 @@
       </app-server-element>
     </div>
   </div>
+
+  <!--
+    <div class="row">
+    <div class="col-xs-12">
+
+      <app-server-element *ngFor="let serverElement of serverElements" [element] = "serverElement">
+
+        <p>
+          <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
+          <em *ngIf="serverElement.type === 'blueprint'">{{ serverElement.content }}</em>
+          <i>{{serverElement.nodeCount}}</i>
+        </p>
+
+      </app-server-element>
+
+    </div>
+  </div>
+  -->
 </div>
